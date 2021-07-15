@@ -6,6 +6,9 @@ public class ConvertArabToRoma {
         if (num <= 0) {
             result = "Результат не возможно записать римскими цифрами";
         }
+        else if (num == 10){
+            result = "X";
+        }
         else if (num < 40) {
             result = "";
             for (int i = 0; i < num / 10; i++) {
@@ -17,7 +20,7 @@ public class ConvertArabToRoma {
             result = "XL" + Calc.numRom[(num % 10) - 1];
         }
         else if (num == 50){
-            result = "Результат: L";
+            result = "L";
         }
         else if (num < 90){
             result = "L";
